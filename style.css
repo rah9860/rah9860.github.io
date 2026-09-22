@@ -375,6 +375,94 @@ h1 {
     border: none;
     display: block;
 }
+/* ===================================================
+   RESUME VIEWER STYLES
+   =================================================== */
+.resume-frame-container {
+    background-color: #f8f9fa;
+    border: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+
+.resume-viewer {
+    width: 100%;
+    height: 85vh; /* Gives full reading height on desktop */
+    min-height: 600px;
+    border: none;
+    display: block;
+}
+/* ===================================================
+   SLIDING RESUME PILL SWITCHER
+   =================================================== */
+
+/* Container wrapper acting as the track */
+.resume-pills {
+    position: relative;
+    background-color: #f1edf0;
+    padding: 6px;
+    border-radius: 30px;
+    display: inline-flex;
+    isolation: isolate; /* Ensures the sliding pill stays behind the text */
+}
+
+/* Base button appearance */
+.resume-pills .nav-link {
+    position: relative;
+    z-index: 2;
+    color: #495057;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 24px;
+    background: transparent !important; /* Disables standard Bootstrap background swap */
+    border: none;
+    transition: color 0.25s ease-in-out;
+}
+
+/* Active text turns white with a slight delay to match slide speed */
+.resume-pills .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* The physical dark pill that slides back and forth */
+.resume-pills::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    height: calc(100% - 12px);
+    width: calc(50% - 6px); /* Half the width of the container */
+    background-color: #FFC4D7; /* Matches your header dark tone */
+    border-radius: 25px;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Slide to right when QA tab is active */
+.resume-pills:has(#qa-tab.active)::before {
+    transform: translateX(100%);
+}
+
+/* Keep left when Game Design tab is active */
+.resume-pills:has(#game-design-tab.active)::before {
+    transform: translateX(0%);
+}
+
+/* Frame container holding the PDF */
+.resume-frame-container {
+    background-color: #f8f9fa;
+    border: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+
+/* Full reading height */
+.resume-viewer {
+    width: 100%;
+    height: 85vh;
+    min-height: 600px;
+    border: none;
+    display: block;
+}
 /*footer*/
 footer{
     text-align: center;
