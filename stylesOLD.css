@@ -1,0 +1,227 @@
+/* Header styling */
+header {
+    /*background-color: #333;*/
+    /*color: white;*/
+    
+    /*background-image:url("Header.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: inherit;
+    padding: 20px;
+    text-align: center;*/
+
+    background-image: url("Header.jpg");/*
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 220px; /* Gives the background image space to render */
+    /*padding: 30px 20px;
+    color: #ffffff; /* Ensures text remains readable over the image */
+    
+    /* Stacks a 50% dark overlay over the image to make white text pop */
+    /*background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url("Header.jpg");*/
+    
+    /* Options for sizing: '100% auto' fits the full width without zooming in */
+    background-size: 100% auto;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    
+    /* Fallback color if the image doesn't fill the full height */
+    background-color: #2b2129; 
+    
+    min-height: 260px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+    text-align: center;
+    
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+/* Gives name/title a crisp dark outline */
+header h1 a {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+}
+/* Enhances the contact details on the right */
+header p {
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 40%;
+    width: 80%;
+}
+.avatar{
+    width: 25%;
+    height: auto;
+    float: left;
+}
+.header-contact {
+    padding: 5px;
+    box-sizing: border-box;
+    border: solid white 3px;
+    float: right;
+    text-align: justify;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.contact-info span {
+    display: block;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+    
+    
+    /*text: white;*/
+}
+
+.nav-links a {
+   /* display: inline-block;
+    padding: 10px;
+    font-size: 23px;
+    color: white;*/
+    
+   /* display: inline-block;
+    padding: 8px 16px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    transition: color 0.2s ease;*/
+    
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 0 4px;
+    font-size: 18px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.35); /* Subtle dark pill background */
+    border-radius: 20px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease;
+}
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffd166;
+}
+
+/* Primary CSS */
+section {
+    display: none;
+}
+#intro {
+    display: block;
+}
+.hiddenLink {
+    text-decoration: none;
+    color: inherit;
+}
+.hiddenLink:hover {
+    text-decoration: none;
+    color: inherit;
+}
+h2 {
+    text-align: center;
+}
+
+/* Introductory section styling */
+.intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.intro-image {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    float:right;
+}
+.intro-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.intro-text {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    margin-left: 20px;
+    max-width: 600px;
+}
+.intro-text h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.intro-text p {
+    line-height: 1.5;
+}
+#about-me {
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.aboutme-image{
+    width: 250px;
+    height: auto;
+    overflow: hidden;
+    float:right;
+}
+.aboutme-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Image gallery styling */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+.gallery-item {
+    position: relative;
+    cursor: pointer;
+}
+.gallery-item img {
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+}
+.gallery-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+/*footer*/
+footer{
+    text-align: center;
+}

@@ -1,0 +1,381 @@
+/* Header styling */
+header {
+    /*background-color: #333;*/
+    /*color: white;*/
+    
+    /*background-image:url("Header.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: inherit;
+    padding: 20px;
+    text-align: center;*/
+
+    background-image: url("Header.jpg");/*
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 220px; /* Gives the background image space to render */
+    /*padding: 30px 20px;
+    color: #ffffff; /* Ensures text remains readable over the image */
+    
+    /* Stacks a 50% dark overlay over the image to make white text pop */
+    /*background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url("Header.jpg");*/
+    
+    /* Options for sizing: '100% auto' fits the full width without zooming in */
+    background-size: 100% auto;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    
+    /* Fallback color if the image doesn't fill the full height */
+    background-color: #2b2129; 
+    
+    min-height: 260px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+    text-align: center;
+    
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+/* Gives name/title a crisp dark outline */
+header h1 a {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+}
+/* Enhances the contact details on the right */
+header p {
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 40%;
+    width: 80%;
+}
+.avatar{
+    width: 25%;
+    height: auto;
+    float: left;
+}
+.header-contact {
+    padding: 5px;
+    box-sizing: border-box;
+    border: solid white 3px;
+    float: right;
+    text-align: justify;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.contact-info span {
+    display: block;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+    
+    
+    /*text: white;*/
+}
+
+.nav-links a {
+   /* display: inline-block;
+    padding: 10px;
+    font-size: 23px;
+    color: white;*/
+    
+   /* display: inline-block;
+    padding: 8px 16px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    transition: color 0.2s ease;*/
+    
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 0 4px;
+    font-size: 18px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.35); /* Subtle dark pill background */
+    border-radius: 20px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease;
+}
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffd166;
+}
+
+/* Primary CSS */
+section {
+    display: none;
+}
+#intro {
+    display: block;
+}
+.hiddenLink {
+    text-decoration: none;
+    color: inherit;
+}
+.hiddenLink:hover {
+    text-decoration: none;
+    color: inherit;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Introductory section styling */
+.intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.intro-image {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    float:right;
+}
+.intro-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.intro-text {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    margin-left: 20px;
+    max-width: 600px;
+}
+.intro-text h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.intro-text p {
+    line-height: 1.5;
+}
+#about-me {
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.aboutme-image{
+    width: 250px;
+    height: auto;
+    overflow: hidden;
+    float:right;
+}
+.aboutme-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ===================================================
+   PORTFOLIO GRID & CARD STYLES
+   =================================================== */
+
+/* 1. Dynamic Grid: auto-fits cards across screens without uneven gaps */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 20px;
+}
+
+/* 2. Interactive Card: handles click effect & layout */
+.project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* 3. Image Frame: forces uneven/differently-sized images to sit uniform & snug */
+.project-thumb-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps all thumbnail windows a consistent square */
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.project-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops cleanly so portrait and landscape images fill the frame */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-thumb {
+    transform: scale(1.04);
+}
+
+/* 4. Title Below Thumbnail */
+.project-card-title {
+    padding: 14px 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2b2129;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* ===================================================
+   MODAL & CAROUSEL STYLES
+   =================================================== */
+
+/* Constrains slideshow images inside modal so they stay balanced */
+.modal-slide-img {
+    height: 380px;
+    object-fit: contain; /* Preserves native aspect ratio without distortion */
+    background-color: #111111;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #fdfafb;
+    border-bottom: 1px solid #f0e6ed;
+}
+
+.modal-body {
+    padding: 24px;
+    background-color: #ffffff;
+}
+
+/* ===================================================
+   WRITING SAMPLES SECTION STYLES
+   =================================================== */
+
+/* Category Headers (Creative, Non-Fiction, etc.) */
+.writing-category-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2b2129;
+    border-bottom: 2px solid #e9d7e5;
+    padding-bottom: 6px;
+}
+
+/* Dynamic Excerpt Grid (retains consistent multi-column layout) */
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* Dark Card Container (Matching your sample design) */
+.writing-card {
+    /*background-color: #0d0c1d; /* Deep dark indigo/navy */
+    background-color: #FFC4D7;
+    color: #74568C;
+    border-radius: 12px;
+    padding: 30px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.writing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+/* Excerpt Quote Text (Dynamic fluid font-size: clamps between 0.95rem and 1.15rem) */
+.writing-excerpt {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    font-size: clamp(0.95rem, 1.1vw + 0.5rem, 1.15rem);
+    line-height: 1.65;
+    margin: 0 0 24px 0;
+    opacity: 0.92;
+}
+
+/* Footer holding the title and button */
+.writing-card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Italicized Title */
+.writing-piece-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #74568C;
+    margin: 0;
+    text-align: center;
+}
+
+/* "Read More" Button */
+.btn-reading {
+    background-color: #ffffff;
+    color: #FFC4D7;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 24px;
+    border-radius: 6px;
+    border: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-reading:hover {
+    background-color: #ffd166; /* Warm highlight on hover */
+    color: #000000;
+}
+
+/* Responsive PDF Viewer inside Modal */
+.pdf-viewer {
+    width: 100%;
+    height: 78vh; /* Fills most of the screen vertically */
+    border: none;
+    display: block;
+}
+/*footer*/
+footer{
+    text-align: center;
+}
